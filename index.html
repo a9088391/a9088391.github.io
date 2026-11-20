@@ -3,133 +3,182 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="郭尚諺的後端工程作品集。從需求分析到上線，負責後端系統設計與整合。">
+  <meta name="description" content="郭尚諺，具 10 年以上後端開發經驗，專長為商用系統維護、SQL 效能調校與系統整合。查看工作成果、AI 協作方式與六個作品。">
   <title>郭尚諺｜後端工程師</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要內容</a>
-  <header class="sidebar">
-    <a class="wordmark" href="#main">郭尚諺</a>
-    <nav class="site-nav" aria-label="網站章節">
-      <a href="#experience">工作經歷</a>
-      <a href="#projects">六個作品</a>
-      <a href="#process">開發方式</a>
-    </nav>
-    <a class="button button-outline" href="https://pda.104.com.tw/profile/share/iaxqi8JtxKoQdej9eJYwvEki5LDsozOT">查看 104 履歷 <span aria-hidden="true">↗</span></a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="#main">郭尚諺</a>
+      <nav aria-label="網站章節">
+        <a href="#experience">工作經歷</a>
+        <a href="#process">AI 開發流程</a>
+        <a href="#projects">作品</a>
+      </nav>
+      <a class="resume-link" href="https://pda.104.com.tw/profile/share/iaxqi8JtxKoQdej9eJYwvEki5LDsozOT">104 履歷 <span aria-hidden="true">↗</span></a>
+    </div>
   </header>
 
   <main id="main" tabindex="-1">
-    <section class="hero" aria-labelledby="role">
-      <div class="hero-frame">
-        <div class="hero-intro">
-          <img class="headshot" src="assets/headshot.png" alt="郭尚諺的大頭照" width="360" height="360">
-          <div>
-            <h1 id="role">後端工程師</h1>
-            <p>從需求分析到上線，負責後端系統設計與整合。</p>
-            <a class="button button-primary" href="#projects">查看六個作品</a>
+    <section class="hero wrap" aria-labelledby="profile-title">
+      <div class="hero-grid">
+        <img class="portrait" src="assets/headshot.png" alt="郭尚諺的大頭照" width="360" height="360">
+        <div class="intro">
+          <p class="role">後端工程師</p>
+          <h1 id="profile-title">郭尚諺</h1>
+          <p class="profile">我有 <strong>10 年以上後端開發經驗</strong>，長期用 <span class="term">PHP／Laravel</span> 維護商用系統，負責 API、資料庫設計、SQL 效能調校與第三方系統整合。近期以 <span class="term">C#／.NET</span> 開發共用後端平台，支援門禁與卡務系統正式上線。</p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#projects">看六個作品 <span aria-hidden="true">↓</span></a>
+            <a class="plain-link" href="#experience">瀏覽工作經歷 <span aria-hidden="true">↓</span></a>
           </div>
         </div>
-        <div class="platform-diagram" role="img" aria-label="門禁與卡務兩套系統共用同一個 .NET 平台">
-          <div class="diagram-systems" aria-hidden="true">
-            <span>門禁</span>
-            <span>卡務</span>
-          </div>
-          <div class="diagram-platform" aria-hidden="true">.NET 共用平台</div>
+      </div>
+      <dl class="quick-facts">
+        <div><dt>所在地</dt><dd>台中</dd></div>
+        <div><dt>學歷</dt><dd>國立中興大學｜資訊科學與工程學系</dd></div>
+        <div><dt>主要技術</dt><dd>PHP／Laravel、C#／.NET、SQL</dd></div>
+      </dl>
+    </section>
+
+    <section class="resume-section" id="experience" aria-labelledby="experience-title">
+      <div class="wrap resume-grid">
+        <div>
+          <h2 id="experience-title">工作經歷</h2>
+          <ol class="timeline">
+            <li>
+              <p class="time">2026.04 – 2026.09</p>
+              <h3>共同創業籌備與專案合作</h3>
+              <p>後端系統負責人</p>
+            </li>
+            <li>
+              <p class="time">2025.03 – 2025.09</p>
+              <h3>精誠資訊</h3>
+              <p>高級程式分析師</p>
+            </li>
+            <li>
+              <p class="time">2023.11 – 2025.03</p>
+              <h3>崴浤科技</h3>
+              <p>後端工程師 · MyFrees 福利社後台與 API</p>
+            </li>
+            <li>
+              <p class="time">2017.05 – 2023.05</p>
+              <h3>微程式資訊</h3>
+              <p>高級工程師 · 停車場管理系統</p>
+            </li>
+          </ol>
+        </div>
+        <div class="outcomes" aria-labelledby="outcomes-title">
+          <h2 id="outcomes-title">代表成果</h2>
+          <article>
+            <h3>門禁、卡務與排班正式上線</h3>
+            <p>以 C#／.NET 10 建置共用後端平台，供門禁與卡務使用。也負責勤務排班的需求釐清與後端規劃，系統已正式上線。</p>
+          </article>
+          <article>
+            <h3>近億筆停車事件與 6–7 種計費模式</h3>
+            <p>維護每年累積近億筆事件的監控系統，透過改寫慢查詢與調整索引縮短等待時間，並確認調整前後的查詢結果一致。獨立開發停車計費，涵蓋分時費率、金額上限與各式優惠。</p>
+          </article>
+          <article>
+            <h3>Laravel 5.1 → 7.2 系統升級</h3>
+            <p>逐版盤點不相容套件、尋找替代方案或補齊功能。每次升級後驗證既有功能，確認穩定再往下一版。</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section experience" id="experience" aria-labelledby="experience-title">
-      <h2 id="experience-title">工作經歷</h2>
-      <ul class="experience-list">
-        <li>
-          <h3>停車場監控與計費</h3>
-          <p>年近億筆停車事件，獨立開發 6–7 種計費模式。</p>
-        </li>
-        <li>
-          <h3>門禁、卡務與排班</h3>
-          <p>三套系統正式上線，門禁與卡務共用 .NET 平台。</p>
-        </li>
-        <li>
-          <h3>Laravel 舊系統升級</h3>
-          <p>分階段將 Laravel 從 5.1 升至 7.2，逐項驗證既有功能。</p>
-        </li>
-      </ul>
+    <section class="method" id="process" aria-labelledby="method-title">
+      <div class="wrap method-inner">
+        <div class="method-heading">
+          <h2 id="method-title">我的 AI 開發流程</h2>
+          <p>我用同一套流程開發新功能、維護舊系統。AI 協助整理需求、比較方案、實作與檢查程式。我負責技術決策，並在每個階段確認結果。</p>
+        </div>
+        <ol class="workflow">
+          <li>
+            <h3>釐清需求</h3>
+            <p>先推演使用流程與例外情境，再請 AI 幫我整理問題、比較可能做法。需要業務判斷時，我整理成問題清單，由 PM 或業務確認。</p>
+          </li>
+          <li>
+            <h3>確認規格與範圍</h3>
+            <p>把確認過的規則寫進規格，拆成有驗收條件的小任務。每個任務先確認能改哪些地方，開發中遇到新規則就回到規格確認。</p>
+          </li>
+          <li>
+            <h3>依核准範圍實作</h3>
+            <p>在公司核准的工具與測試環境內使用 AI，只提供任務所需的程式與測試資料。正式環境憑證和部署權限由團隊保管。</p>
+          </li>
+          <li>
+            <h3>審查變更與驗收</h3>
+            <p>我逐項核對變更、執行測試，確認符合規格。上線前，團隊可以查看規格、程式差異與測試結果，並依公司權限與流程核准。</p>
+          </li>
+        </ol>
+        <aside class="method-example" aria-labelledby="example-title">
+          <h3 id="example-title">以門禁系統為例</h3>
+          <p>最初只有概要需求。我先用自己的經驗推演流程，和 AI 比較做法，再把需要業務決策的問題整理給 PM 或業務。規則確認後才寫成規格並拆任務。開發中遇到新情境，也先補清楚規則再繼續。下面的六個作品展示這套流程在不同技術棧的實作結果。</p>
+        </aside>
+      </div>
     </section>
 
-    <section class="section projects" id="projects" aria-labelledby="projects-title">
-      <h2 id="projects-title">六個作品</h2>
-      <p class="section-intro">從 GitHub 下載，依 README 在本機操作。</p>
-
+    <section class="projects wrap" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <h2 id="projects-title">六個作品</h2>
+        <p>各專案都有 GitHub 原始碼和本機啟動說明。</p>
+      </div>
       <ul class="project-index">
         <li>
           <details name="project-screenshots" open>
             <summary><span class="project-name">請購簽核</span> <span class="stack">C# / .NET / React</span></summary>
-            <img src="assets/approval-detail.jpg" width="1280" height="900" loading="lazy" alt="請購單明細，顯示送審、主管核准與財務核准的操作歷程">
+            <p class="project-description">追蹤請購單從送審、主管核准到財務核准的流程與歷程。</p>
+            <figure class="project-visual"><img src="assets/approval-detail.jpg" width="1280" height="900" loading="lazy" alt="請購單明細，顯示送審、主管核准與財務核准的操作歷程"></figure>
           </details>
           <a class="repo-link" href="https://github.com/a9088391/procurement-approval" aria-label="請購簽核的 GitHub 原始碼">GitHub <span aria-hidden="true">↗</span></a>
         </li>
         <li>
           <details name="project-screenshots">
             <summary><span class="project-name">門市訂單</span> <span class="stack">PHP / Laravel / Vue</span></summary>
-            <img src="assets/order-detail.jpg" width="1280" height="900" loading="lazy" alt="門市訂單明細，顯示已付款狀態及庫存保留、扣除與釋放紀錄">
+            <p class="project-description">整合訂單、庫存保留與模擬付款，可查看付款通知重送時的處理結果。</p>
+            <figure class="project-visual"><img src="assets/order-detail.jpg" width="1280" height="900" loading="lazy" alt="門市訂單明細，顯示已付款狀態及庫存保留、扣除與釋放紀錄"></figure>
           </details>
           <a class="repo-link" href="https://github.com/a9088391/store-ordering" aria-label="門市訂單的 GitHub 原始碼">GitHub <span aria-hidden="true">↗</span></a>
         </li>
         <li>
           <details name="project-screenshots">
             <summary><span class="project-name">多品牌會員</span> <span class="stack">Node.js / NestJS / React</span></summary>
-            <img src="assets/member-points.png" width="1536" height="1024" loading="lazy" alt="會員查看不同品牌的點數餘額與點數流水">
+            <p class="project-description">分開管理各品牌的點數，展示兌換時的扣點、流水與優惠券發放。</p>
+            <figure class="project-visual"><img src="assets/member-points.png" width="1536" height="1024" loading="lazy" alt="會員查看不同品牌的點數餘額與點數流水"></figure>
           </details>
           <a class="repo-link" href="https://github.com/a9088391/membership-rewards" aria-label="多品牌會員的 GitHub 原始碼">GitHub <span aria-hidden="true">↗</span></a>
         </li>
         <li>
           <details name="project-screenshots">
             <summary><span class="project-name">IoT 設備監控</span> <span class="stack">Go / Gin / Vue</span></summary>
-            <img src="assets/device-monitoring.jpg" width="1265" height="1199" loading="lazy" alt="臺中市環境感測設備列表，右側顯示溫度、濕度、PM2.5 與量測時間">
+            <p class="project-description">查看臺中市官方環境觀測資料，並在模擬場域測試設備告警。</p>
+            <figure class="project-visual"><img src="assets/device-monitoring.jpg" width="1265" height="1199" loading="lazy" alt="臺中市環境感測設備列表，右側顯示溫度、濕度、PM2.5 與量測時間"></figure>
           </details>
           <a class="repo-link" href="https://github.com/a9088391/iot-monitoring" aria-label="IoT 設備監控的 GitHub 原始碼">GitHub <span aria-hidden="true">↗</span></a>
         </li>
         <li>
           <details name="project-screenshots">
             <summary><span class="project-name">餐飲門市對帳</span> <span class="stack">Ruby on Rails / Vue</span></summary>
-            <img src="assets/reconciliation-workbench.png" width="1280" height="1403" loading="lazy" alt="餐飲對帳工作台，顯示對帳結果、差額來源與異常查核紀錄">
+            <p class="project-description">成對匯入營業與收款 CSV，比對差額、追查來源並保留異常處理紀錄。</p>
+            <figure class="project-visual"><img src="assets/reconciliation-workbench.png" width="1280" height="1403" loading="lazy" alt="餐飲對帳工作台，顯示對帳結果、差額來源與異常查核紀錄"></figure>
           </details>
           <a class="repo-link" href="https://github.com/a9088391/restaurant-reconciliation" aria-label="餐飲門市對帳的 GitHub 原始碼">GitHub <span aria-hidden="true">↗</span></a>
         </li>
         <li>
           <details name="project-screenshots">
             <summary><span class="project-name">AI 客服工單</span> <span class="stack">Python / FastAPI / Vue</span></summary>
-            <img src="assets/support-workbench.jpg" width="1905" height="1232" loading="lazy" alt="AI 客服工作台，顯示日月潭問答、引用來源、追問與知識搜尋">
+            <p class="project-description">以知識庫回答問題，將回答與引用來源保存在工單。完整問答需 Gemini API Key。</p>
+            <figure class="project-visual"><img src="assets/support-workbench.jpg" width="1905" height="1232" loading="lazy" alt="AI 客服工作台，顯示日月潭問答、引用來源、追問與知識搜尋"></figure>
           </details>
           <a class="repo-link" href="https://github.com/a9088391/ai-support" aria-label="AI 客服工單的 GitHub 原始碼">GitHub <span aria-hidden="true">↗</span></a>
         </li>
       </ul>
-      <p class="project-note">AI 客服完整問答需 Gemini API Key。</p>
     </section>
 
-    <section class="section process" id="process" aria-labelledby="process-title">
-      <h2 id="process-title">開發方式</h2>
-      <ol class="process-list">
-        <li>
-          <h3>釐清需求</h3>
-          <p>推演流程與例外情境，用 AI 比較可能的做法。</p>
-        </li>
-        <li>
-          <h3>確認規格</h3>
-          <p>與 PM 或業務確認規則，寫入規格並拆成開發任務。</p>
-        </li>
-        <li>
-          <h3>實作與驗證</h3>
-          <p>依規格開發、測試與審查，核對交付結果。</p>
-        </li>
-      </ol>
-    </section>
-
-    <footer class="section footer">
-      <a class="button button-dark" href="https://pda.104.com.tw/profile/share/iaxqi8JtxKoQdej9eJYwvEki5LDsozOT">查看 104 履歷 <span aria-hidden="true">↗</span></a>
+    <footer class="wrap footer">
+      <span>郭尚諺 · 後端工程師</span>
+      <a class="resume-link" href="https://pda.104.com.tw/profile/share/iaxqi8JtxKoQdej9eJYwvEki5LDsozOT">查看 104 履歷 <span aria-hidden="true">↗</span></a>
     </footer>
   </main>
 </body>
