@@ -6,7 +6,7 @@
   <meta name="description" content="郭尚諺的後端工程作品集。從需求分析到上線，負責後端系統設計與整合。">
   <title>郭尚諺｜後端工程師</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要內容</a>
@@ -63,44 +63,47 @@
       <h2 id="projects-title">六個作品</h2>
       <p class="section-intro">從 GitHub 下載，依 README 在本機操作。</p>
 
-      <div class="featured-projects">
-        <article>
-          <div class="project-heading">
-            <h3>請購簽核</h3>
-            <p class="stack">C# / .NET / React</p>
-          </div>
-          <a class="repo-link" href="https://github.com/a9088391/procurement-approval" aria-label="請購簽核的 GitHub 原始碼">GitHub <span aria-hidden="true">↗</span></a>
-          <img src="assets/approval-detail.jpg" width="1280" height="900" loading="lazy" alt="請購單明細，顯示送審、主管核准與財務核准的操作歷程">
-        </article>
-        <article>
-          <div class="project-heading">
-            <h3>門市訂單</h3>
-            <p class="stack">PHP / Laravel / Vue</p>
-          </div>
-          <a class="repo-link" href="https://github.com/a9088391/store-ordering" aria-label="門市訂單的 GitHub 原始碼">GitHub <span aria-hidden="true">↗</span></a>
-          <img src="assets/order-detail.jpg" width="1280" height="900" loading="lazy" alt="門市訂單明細，顯示已付款狀態及庫存保留、扣除與釋放紀錄">
-        </article>
-      </div>
-
       <ul class="project-index">
         <li>
-          <h3>多品牌會員</h3>
-          <p class="stack">Node.js / NestJS / React</p>
+          <details name="project-screenshots" open>
+            <summary><span class="project-name">請購簽核</span> <span class="stack">C# / .NET / React</span></summary>
+            <img src="assets/approval-detail.jpg" width="1280" height="900" loading="lazy" alt="請購單明細，顯示送審、主管核准與財務核准的操作歷程">
+          </details>
+          <a class="repo-link" href="https://github.com/a9088391/procurement-approval" aria-label="請購簽核的 GitHub 原始碼">GitHub <span aria-hidden="true">↗</span></a>
+        </li>
+        <li>
+          <details name="project-screenshots">
+            <summary><span class="project-name">門市訂單</span> <span class="stack">PHP / Laravel / Vue</span></summary>
+            <img src="assets/order-detail.jpg" width="1280" height="900" loading="lazy" alt="門市訂單明細，顯示已付款狀態及庫存保留、扣除與釋放紀錄">
+          </details>
+          <a class="repo-link" href="https://github.com/a9088391/store-ordering" aria-label="門市訂單的 GitHub 原始碼">GitHub <span aria-hidden="true">↗</span></a>
+        </li>
+        <li>
+          <details name="project-screenshots">
+            <summary><span class="project-name">多品牌會員</span> <span class="stack">Node.js / NestJS / React</span></summary>
+            <img src="assets/member-points.png" width="1536" height="1024" loading="lazy" alt="會員查看不同品牌的點數餘額與點數流水">
+          </details>
           <a class="repo-link" href="https://github.com/a9088391/membership-rewards" aria-label="多品牌會員的 GitHub 原始碼">GitHub <span aria-hidden="true">↗</span></a>
         </li>
         <li>
-          <h3>IoT 設備監控</h3>
-          <p class="stack">Go / Gin / Vue</p>
+          <details name="project-screenshots">
+            <summary><span class="project-name">IoT 設備監控</span> <span class="stack">Go / Gin / Vue</span></summary>
+            <img src="assets/device-monitoring.jpg" width="1265" height="1199" loading="lazy" alt="臺中市環境感測設備列表，右側顯示溫度、濕度、PM2.5 與量測時間">
+          </details>
           <a class="repo-link" href="https://github.com/a9088391/iot-monitoring" aria-label="IoT 設備監控的 GitHub 原始碼">GitHub <span aria-hidden="true">↗</span></a>
         </li>
         <li>
-          <h3>餐飲門市對帳</h3>
-          <p class="stack">Ruby on Rails / Vue</p>
+          <details name="project-screenshots">
+            <summary><span class="project-name">餐飲門市對帳</span> <span class="stack">Ruby on Rails / Vue</span></summary>
+            <img src="assets/reconciliation-workbench.png" width="1280" height="1403" loading="lazy" alt="餐飲對帳工作台，顯示對帳結果、差額來源與異常查核紀錄">
+          </details>
           <a class="repo-link" href="https://github.com/a9088391/restaurant-reconciliation" aria-label="餐飲門市對帳的 GitHub 原始碼">GitHub <span aria-hidden="true">↗</span></a>
         </li>
         <li>
-          <h3>AI 客服工單</h3>
-          <p class="stack">Python / FastAPI / Vue</p>
+          <details name="project-screenshots">
+            <summary><span class="project-name">AI 客服工單</span> <span class="stack">Python / FastAPI / Vue</span></summary>
+            <img src="assets/support-workbench.jpg" width="1905" height="1232" loading="lazy" alt="AI 客服工作台，顯示日月潭問答、引用來源、追問與知識搜尋">
+          </details>
           <a class="repo-link" href="https://github.com/a9088391/ai-support" aria-label="AI 客服工單的 GitHub 原始碼">GitHub <span aria-hidden="true">↗</span></a>
         </li>
       </ul>
