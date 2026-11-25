@@ -140,8 +140,31 @@ details[open] > summary .disclosure-label { display: none; }
 .project-card details[open] .toggle-indicator::before { content: "−"; font-size: 1.2rem; }
 .project-detail-title { margin: .1rem .8rem .5rem; }
 .project-description { margin: .05rem .8rem .7rem; color: var(--muted); font-size: .95rem; }
-.project-visual { display: grid; place-items: center; margin: .7rem .8rem .9rem; padding: .35rem; border: 1px solid var(--line); border-radius: .3rem; background: #021121; }
+.project-visual { position: relative; display: grid; place-items: center; margin: .7rem .8rem .9rem; padding: .35rem; border: 1px solid var(--line); border-radius: .3rem; background: #021121; }
+.project-image-stage { position: relative; display: grid; place-items: center; min-width: 0; }
 .project-visual img { width: auto; height: auto; max-height: 34rem; object-fit: contain; }
+.project-image-trigger { display: none; }
+@supports selector(details::details-content) and (interpolate-size: allow-keywords) and (transition-behavior: allow-discrete) {
+  .project-card details { interpolate-size: allow-keywords; }
+  .project-card details::details-content {
+    display: flow-root;
+    block-size: 0;
+    overflow: clip;
+    transition: block-size 360ms ease, content-visibility 360ms allow-discrete;
+  }
+  .project-card details[open]::details-content { block-size: auto; }
+}
+.project-image-popover { display: none; color: var(--text); }
+@supports selector(:popover-open) {
+  .project-image-trigger { position: absolute; inset: 0; display: flex; width: 100%; height: 100%; align-items: flex-end; justify-content: flex-end; padding: .5rem; border: 0; border-radius: .3rem; background: transparent; color: var(--text); cursor: zoom-in; }
+  .project-image-trigger span { padding: .25rem .55rem; border: 1px solid var(--line); border-radius: .3rem; background: #021226e8; color: var(--accent-soft); font-size: .8rem; }
+  .project-image-popover:popover-open { position: fixed; inset: 0; display: grid; grid-template-rows: auto minmax(0, 1fr); gap: .75rem; width: min(96vw, 90rem); height: min(92vh, 60rem); height: min(92dvh, 60rem); max-width: calc(100vw - 2rem); max-height: calc(100vh - 2rem); max-height: calc(100dvh - 2rem); margin: auto; padding: 1rem; overflow: hidden; border: 1px solid var(--accent-soft); border-radius: var(--radius); background: var(--panel); }
+  .project-image-popover::backdrop { background: #020f21d9; }
+  .project-image-popover-heading { display: flex; align-items: center; justify-content: space-between; gap: .75rem; }
+  .project-image-popover-heading h2 { min-width: 0; font-size: clamp(1.1rem, 2vw, 1.5rem); }
+  .project-image-close { min-width: 44px; min-height: 44px; padding: .4rem .7rem; border: 1px solid var(--line); border-radius: .35rem; background: var(--panel-raised); color: var(--text); font: inherit; cursor: pointer; }
+  .project-image-popover > img { justify-self: center; align-self: center; width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; }
+}
 .project-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: .5rem; min-height: 2.75rem; margin-top: auto; padding-inline: .8rem; border-top: 1px solid var(--line); }
 .project-action { display: inline-flex; align-items: center; justify-content: center; gap: .3rem; min-height: 2.75rem; padding-inline: .3rem; color: var(--accent-soft); font-size: .875rem; }
 .footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .5rem 1rem; padding-block: .4rem 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
@@ -228,6 +251,13 @@ details[open] > summary .disclosure-label { display: none; }
   .section-heading h2 { font-size: 1.35rem; }
 }
 
+@media (max-width: 45rem) {
+  @supports selector(:popover-open) {
+    .project-image-popover:popover-open { width: calc(100vw - 1rem); height: calc(100vh - 1rem); height: calc(100dvh - 1rem); padding: .75rem; }
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
+  .project-card details::details-content { transition: none !important; }
 }
